@@ -1,6 +1,7 @@
 const technologiesSelect = document.querySelector(
   "#calculator_form_technologies"
 );
+const calculatorForm = document.querySelector("#calculator_form");
 
 const technologiesMultiSelect = new Choices(technologiesSelect, {
   allowSearch: false,
@@ -31,33 +32,32 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
 
 calculateSum();
 
-const calculatorForm = document.querySelector(".calculator_form");
-
-calculatorForm.addEventListener("submit", function(event) {
+calculatorForm.addEventListener("submit", function (event) {
   event.preventDefault();
   calculateSum();
 });
 
 function calculateSum() {
-  // Selectors
+  // SELECTORS
+
   const websiteTypeSelect = document.querySelector(
     "#calculator_form_website_type"
   );
-  const websiteCart = document.querySelector(
+  const websiteCartSelect = document.querySelector(
     "#calculator_form_input_cart input:checked"
   );
-  const websiteReception = document.querySelector(
+  const websiteReceptionSelect = document.querySelector(
     "#calculator_form_input_reception input:checked"
   );
+  // VALUES
 
-  // Values
   const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value);
+  const websiteCartValue = convertCartOptionToPrice(websiteCartSelect.value);
+  const websiteReceptionValue = convertReceptionOptionToPrice(
+    websiteReceptionSelect.value
+  );
   const technologiesValue = getTechnologiesSum(
     technologiesMultiSelect.getValue()
-  );
-  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);
-  const websiteReceptionValue = convertReceptionOptionToPrice(
-    websiteReception.value
   );
 
   const totalSum =
@@ -72,15 +72,27 @@ function calculateSum() {
 function renderSum(sum) {
   const costElement = document.querySelector("#calculator_form_total_cost");
 
-  costElement.textContent = "Calculating...";
+  costElement.textContent = "Calculating";
+
+  setTimeout(function () {
+    costElement.textContent = "Calculating.";
+  }, 250);
+
+  setTimeout(function () {
+    costElement.textContent = "Calculating..";
+  }, 500);
+
+  setTimeout(function () {
+    costElement.textContent = "Calculating...";
+  }, 750);
 
   setTimeout(function () {
     costElement.textContent = sum + "$";
-  }, 2000);
+  }, 1000);
 }
 
 function convertCartOptionToPrice(option) {
-  if (option === "yes") {
+  if (option === "Yes") {
     return 300;
   }
 
@@ -88,7 +100,7 @@ function convertCartOptionToPrice(option) {
 }
 
 function convertReceptionOptionToPrice(option) {
-  if (option === "yes") {
+  if (option === "Yes") {
     return 500;
   }
 
@@ -97,11 +109,9 @@ function convertReceptionOptionToPrice(option) {
 
 function getTechnologiesSum(technologiesArr) {
   let totalSum = 0;
-
   technologiesArr.forEach(function (tech) {
     totalSum = totalSum + extractPriceFromValue(tech.value);
   });
-
   return totalSum;
 }
 
