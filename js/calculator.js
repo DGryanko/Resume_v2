@@ -1,6 +1,14 @@
 const technologiesSelect = document.querySelector(
   "#calculator_form_technologies"
+); 
+const calculatorForm = document.querySelector(
+  "#calculator_form"
 );
+
+calculatorForm.addEventListener('submit',function(event) {
+  event.preventDefault();
+  console.log('FORM submitted')
+});
 
 const technologiesMultiSelect = new Choices(technologiesSelect, {
   allowSearch: false,
@@ -29,88 +37,3 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
   },
 });
 
-calculateSum();
-
-const calculatorForm = document.querySelector(".calculator_form");
-
-calculatorForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  calculateSum();
-});
-
-function calculateSum() {
-  // Selectors
-  const websiteTypeSelect = document.querySelector(
-    "#calculator_form_website_type"
-  );
-  const websiteCart = document.querySelector(
-    "#calculator_form_input_cart input:checked"
-  );
-  const websiteReception = document.querySelector(
-    "#calculator_form_input_reception input:checked"
-  );
-
-  // Values
-  const websiteTypeValue = extractPriceFromValue(websiteTypeSelect.value);
-  const technologiesValue = getTechnologiesSum(
-    technologiesMultiSelect.getValue()
-  );
-  const websiteCartValue = convertCartOptionToPrice(websiteCart.value);
-  const websiteReceptionValue = convertReceptionOptionToPrice(
-    websiteReception.value
-  );
-
-  const totalSum =
-    websiteTypeValue +
-    technologiesValue +
-    websiteCartValue +
-    websiteReceptionValue;
-
-  renderSum(totalSum);
-}
-
-function renderSum(sum) {
-  const costElement = document.querySelector("#calculator_form_total_cost");
-
-  costElement.textContent = "Calculating...";
-
-  setTimeout(function () {
-    costElement.textContent = sum + "$";
-  }, 2000);
-}
-
-function convertCartOptionToPrice(option) {
-  if (option === "yes") {
-    return 300;
-  }
-
-  return 0;
-}
-
-function convertReceptionOptionToPrice(option) {
-  if (option === "yes") {
-    return 500;
-  }
-
-  return 0;
-}
-
-function getTechnologiesSum(technologiesArr) {
-  let totalSum = 0;
-
-  technologiesArr.forEach(function (tech) {
-    totalSum = totalSum + extractPriceFromValue(tech.value);
-  });
-
-  return totalSum;
-}
-
-function extractPriceFromValue(str) {
-  const price = str.match(/:\d+/);
-
-  if (price) {
-    return Number(price[0].slice(1)) || 0;
-  }
-
-  return 0;
-}
