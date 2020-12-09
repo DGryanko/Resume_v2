@@ -31,12 +31,12 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
 
 calculateSum();
 
-// const calculatorForm = document.querySelector(".calculator_form");
+const calculatorForm = document.querySelector(".calculator_form");
 
-// calculatorForm.addEventListener("submit", function(event) {
-//   event.preventDefault();
-//   calculateSum();
-// });
+calculatorForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  calculateSum();
+});
 
 function calculateSum() {
   // Selectors
