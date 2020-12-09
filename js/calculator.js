@@ -39,13 +39,13 @@ calculatorForm.addEventListener("submit", function (event) {
   const websiteTypeSelect = document.querySelector(
     '#calculator_form_website_type'
   );
-  const websiteCardValue = document.querySelector('.calculator_form_input_radio input:checked');
-
+  const websiteCartValue = document.querySelector('#calculator_form_input_cart input:checked');
+  const websiteReceptionValue = document.querySelector('#calculator_form_input_reception input:checked');
 // VALUES
 
   const websiteTypeValue = websiteTypeSelect.value;
 
   const technologiesValue = technologiesMultiSelect.getValue()
-  console.log(websiteCardValue.value);
+  console.log(websiteCartValue.value, websiteReceptionValue.value);
 });
 
