@@ -33,13 +33,19 @@ const technologiesMultiSelect = new Choices(technologiesSelect, {
 
 calculatorForm.addEventListener("submit", function (event) {
   event.preventDefault();
+
+// SELECTORS  
+
   const websiteTypeSelect = document.querySelector(
-    "#calculator_form_website_type"
+    '#calculator_form_website_type'
   );
+  const websiteCardValue = document.querySelector('.calculator_form_input_radio input:checked');
+
+// VALUES
 
   const websiteTypeValue = websiteTypeSelect.value;
 
   const technologiesValue = technologiesMultiSelect.getValue()
-  console.log(technologiesValue);
+  console.log(websiteCardValue.value);
 });
 
