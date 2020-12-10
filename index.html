@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+
+    <style>
+        .modal {
+            display: none;
+        }
+    </style>
+
     <link rel="stylesheet" href="./css/normalize.min.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -22,7 +29,7 @@
             </a>
             <div class="navigation_bar">
                 <a href="" class="hire_me"> — HIRE ME</a>
-                <a href="" class="mobile_menu">
+                <a href="" class="mobile_menu" id="mobile_menu_btn">
                     <i class="fas fa-bars"></i>
                 </a>
             </div>
@@ -48,9 +55,9 @@
             <img src="./img/my-photo.jpg" class="front_page_my_photo" alt="My-photo">
 
             <p class="front_page_my_description">
-                About me in 2 minutes
+                About me in 10 sec
             </p>
-            <button class="front_page_play_btn">
+            <button class="front_page_play_btn" id="my_video_btn">
                 PLAY
             </button>
             <img src="./img/laptop.svg" alt="" class="front_page_laptop">
@@ -108,7 +115,7 @@
                         <img src="img/web-apps-laptop.png" alt="web apps laptop" class="about-img" />
                     </p>
                 </div>
-                <p class="about-text">
+                <p class="about-text" id="about">
                     / I will help you to create a high-performance Landing Page, functional
                     corporate website for your business, interactive web app for SaaS,
                     startup, or other services.
@@ -122,7 +129,7 @@
 
         <section class="personal-projects">
             <div class="container">
-                <h3 class="section-title personal-projects-title">My personal _projects</h3>
+                <h3 class="section-title personal-projects-title" id="projects">My personal _projects</h3>
 
                 <div class="personal-project-item">
                     <div class="personal-project-item-container">
@@ -246,7 +253,7 @@
         </section>
         <section class="calculator">
             <div class="container">
-                <h3 class="calculator-title section-title">
+                <h3 class="calculator-title section-title" id="cost">
                     Calculate_ the cost of a future project
                 </h3>
                 <p class="calculator-descr">
@@ -319,7 +326,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <h3 class="footer_my_name">Dmitriy Gryanko</h3>
             <p class="footer_my_profession">Frontend Developer</p>
@@ -346,26 +353,47 @@
     <div class="modals_wrapper">
         <!-- Mobile menu -->
 
-        <div class="modal modal_mobile_menu">
-            <div class="container modal_mobile_container">
-                <nav class="mobile_menu_nav">
-                    <a href="" class="mobile_menu_item">ABOUT</a>
-                    <a href="" class="mobile_menu_item">PROJECTS</a>
-                    <a href="" class="mobile_menu_item">COST CALCULATOR</a>
-                    <a href="" class="mobile_menu_item">CONTACTS</a>
-                </nav>
-                <a href="tel:+380633116622" class="mobile_menu_my_tel">+38 (063) 311 66 22</a>
-                <a href="mailto:fragment374@gmail.com" class="mobile_menu_my_mail">fragment374@gmail.com</a>
-    
+        <div class="modal modal_mobile_menu" id="modal_mobile_menu">
+            <div class="modal_content">
+                <div class="container modal_mobile_container">
+                    <i class="fas fa-times modal_close_btn mobile_menu_close_btn"></i>
+                    <nav class="mobile_menu_nav">
+                        <a href="#about" class="mobile_menu_item">ABOUT</a>
+                        <a href="#projects" class="mobile_menu_item">PROJECTS</a>
+                        <a href="#cost" class="mobile_menu_item">COST CALCULATOR</a>
+                        <a href="#contacts" class="mobile_menu_item">CONTACTS</a>
+                    </nav>
+                    <nav class="mobile_menu_contacts">
+                        <a href="tel:+380633116622" class="mobile_menu_my_tel">+38 (063) 311 66 22</a>
+                        <a href="mailto:fragment374@gmail.com" class="mobile_menu_my_mail">fragment374@gmail.com</a>
+                    </nav>
+                </div>
             </div>
+        </div>
+        <!-- Video modal -->
 
+        <div class="modal modal_area_bgd" id="my_video_modal">
+            <div class="my_video_container">
+                <i class="fas fa-times modal_close_btn my_video_close_btn"></i>
+                <video class="my_video_content modal_area_content" src="video.mp4" controls></video>
+            </div>
+        </div>
+        <!-- Thnx modal -->
+
+        <div class="modal modal_area_bgd" id="request_received">
+            <div class="my_video_container">
+                <i class="fas fa-times modal_close_btn my_video_close_btn"></i>
+                <h3 class="request_received_title">{Thanks}</h3>
+                <p class="request_received_primary">I've received your request/</p>
+                <p class="request_received_secondary">I will contact you soon =)</p>
+            </div>
         </div>
     </div>
 
 
-
     <script src="./js/choices.min.js"></script>
     <script src="./js/calculator.js"></script>
+    <script src="./js/modals.js"></script>
 </body>
 
 </html>
