@@ -102,7 +102,50 @@ body {
   border: none;
   cursor: pointer;
 }
-
+/* MODALS */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.modal_mobile_menu {
+  background: var(--c-light);
+}
+.modal_mobile_container {
+}
+.mobile_menu_nav {
+  display: flex;
+  flex-direction: column;
+}
+.mobile_menu_item {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--txt-c-grey);
+  padding-bottom: 35px;
+}
+.mobile_menu_my_tel {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-dark);
+  padding-bottom: 15px;
+}
+.mobile_menu_my_mail {
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-dark);
+  padding-bottom: 30px;
+  text-decoration: none;
+}
 /* Front page */
 .navigation {
   width: 320px;
@@ -567,8 +610,7 @@ body {
   line-height: 150%;
   color: var(--txt-c-dark);
 }
-_________________________________
-.calculator_form_website_type {
+_________________________________ .calculator_form_website_type {
   cursor: pointer;
   border: none;
   border-bottom: 1px solid var(--c-grey);
@@ -757,4 +799,3 @@ _________________________________
   text-decoration: none;
   color: var(--c-dark);
 }
-/* MODALS */
