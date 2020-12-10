@@ -186,6 +186,7 @@ body {
 .modal_close_btn {
   font-style: 18px;
   position: absolute;
+  z-index: 10;
   color: var(--c-grey-blue);
   top: 16px;
   right: 16px;
@@ -202,8 +203,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   padding: 20px 10px;
+  height: 80%;
 }
 .my_video_content {
   width: 100%;
