@@ -1,16 +1,16 @@
-const mobileMenuBtn = document.querySelector('#mobile_menu_btn');
-const myVideoBtn = document.querySelector('#my_video_btn');
+const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
+const myVideoBtn = document.querySelector('#my-video-btn');
 
-const myVideoModal = document.querySelector('#my_video_modal');
-const mobileMenu = document.querySelector('#modal_mobile_menu');
+const myVideoModal = document.querySelector('#my-video-modal');
+const mobileMenu = document.querySelector('#mobile-menu');
 
-const modalCloseBtns = document.querySelectorAll('.modal_close_btn');
+const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
 
-const modalsWrappers = document.querySelectorAll('.modal_area_bgd');
-const modalContainers = document.querySelectorAll('.modal_area_content');
+const modalsWrappers = document.querySelectorAll('.modal-area-bgd');
+const modalContainers = document.querySelectorAll('.modal-area-content');
 
-const MODAL_ACTIVE_CLASS = 'modal_active';
-const BODY_SCROLL_DISABLE_CLASS = 'body_scroll_disable';
+const MODAL_ACTIVE_CLASS = 'modal-active';
+const BODY_SCROLL_DISABLE_CLASS = 'body-scroll-disable';
 
 enableCloseModalOnBgdClick();
 hideModalOnMobileMenuElementsClick();
@@ -68,7 +68,7 @@ function hideModal() {
 
 function hideModalOnMobileMenuElementsClick() {
     const MOBILE_MENU_ITEM_CLOSE_DELAY = 150;
-    const menuElements = document.querySelectorAll('.mobile_menu_item');
+    const menuElements = document.querySelectorAll('.mobile-menu-item');
 
     if (menuElements.length) {
         menuElements.forEach( container => {
