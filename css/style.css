@@ -352,9 +352,7 @@ body {
   align-items: center;
 }
 .front_page_about_me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100px;
 }
 .front_page_my_photo {
   width: 170px;
@@ -687,7 +685,7 @@ body {
   margin: 0 0 30px 0;
 }
 
-.calculator-descr  span {
+.calculator-descr span {
   background: var(--c-accent);
   padding: 5px;
 }
@@ -898,12 +896,16 @@ _________________________________
   margin: 0;
 }
 /* FOOTER SECTION */
+.footer_my_info {
+  text-align: center;
+}
 .footer_my_name {
   font-weight: bold;
   font-size: 17px;
   line-height: 150%;
   color: var(--txt-c-dark);
   margin: 0;
+  text-align: center;
 }
 .footer_my_profession {
   font-size: 17px;
@@ -912,6 +914,10 @@ _________________________________
   margin: 0;
   padding-bottom: 20px;
   color: var(--txt-c-dark);
+}
+.footer_contacts {
+  display: flex;
+  flex-direction: column;
 }
 .footer_my_tel {
   text-decoration: none;
@@ -933,13 +939,14 @@ _________________________________
 .social_links_item {
   font-size: 25px;
 }
-.social_links_items:last-child {
-  margin-right: 0;
-}
+
 .social_links_items {
   margin-right: 35px;
   text-decoration: none;
   color: var(--c-dark);
+}
+.social_links_items:last-child {
+  margin-right: 0;
 }
 .social_links_items i {
   transition: all 0.2s ease-in-out;
@@ -990,8 +997,8 @@ _________________________________
   .front_page_my_description {
     font-size: 17px;
     line-height: 150%;
-    width: 385px;
     margin: 0;
+    text-align: left;
   }
   .front_page_about_me {
     align-items: flex-start;
@@ -1005,9 +1012,6 @@ _________________________________
   .front_page_my_photo {
     width: 200px;
     padding-right: 35px;
-  }
-  .front_page_my_description {
-    text-align: left;
   }
   .front_page_play_btn {
     margin-bottom: 0;
@@ -1101,15 +1105,14 @@ _________________________________
   .callback-form-submit {
     margin-top: 10px;
   }
-  ________ 
-  .calculator .container {
+  ________ .calculator .container {
     align-items: normal;
     position: relative;
     padding: 20px 10px 90px 10px;
   }
 
   .calculator-title {
-    width: 605px;
+    width: 500px;
     font-size: 50px;
     line-height: 60px;
     text-align: left;
@@ -1146,5 +1149,17 @@ _________________________________
 
   .calculator_form_title {
     line-height: 150%;
+  }
+  .footer_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_my_mail {
+    padding-bottom: 0;
+  }
+  .footer .container {
+    align-items: flex-start;
+    padding-bottom: 0;
   }
 }
