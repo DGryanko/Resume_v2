@@ -687,7 +687,7 @@ body {
   margin: 0 0 30px 0;
 }
 
-.calculator-descr span {
+.calculator-descr  span {
   background: var(--c-accent);
   padding: 5px;
 }
@@ -1080,5 +1080,71 @@ _________________________________
     font-size: 200px;
     line-height: 240px;
     top: 19px;
+  }
+
+  .callback-form-container {
+    padding: 75px 30px 80px 30px;
+  }
+
+  .callback-form-title {
+    font-size: 36px;
+    line-height: 43px;
+    width: 386px;
+  }
+
+  .callback-form-submit,
+  .callback-form-input,
+  .callback-form-descr {
+    width: 386px;
+    box-sizing: border-box;
+  }
+  .callback-form-submit {
+    margin-top: 10px;
+  }
+  ________ 
+  .calculator .container {
+    align-items: normal;
+    position: relative;
+    padding: 20px 10px 90px 10px;
+  }
+
+  .calculator-title {
+    width: 605px;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .calculator-descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    font-size: 36px;
+    line-height: 150%;
+  }
+
+  .calculator-icon {
+    position: absolute;
+    right: 10px;
+    top: 405px;
+    width: 344px;
+    z-index: 1;
+  }
+
+  .calculator-text {
+    text-align: left;
+    width: 330px;
+    margin-top: 10px;
+  }
+
+  .calculator_form {
+    z-index: 2;
+    padding: 60px 80px 70px 80px;
+  }
+
+  .calculator_form_title {
+    line-height: 150%;
   }
 }
