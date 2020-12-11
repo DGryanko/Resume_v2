@@ -42,7 +42,10 @@
 
             <h1 class="front_page_my_name">[Dmitriy Gryanko]</h1>
 
-            <h2 class="front_page_profession">{FRONTEND DEVELOPER}</h2>
+            <h2 class="front_page_profession">
+                <span class="profession_p1">{Front-End}_</span>
+                <span class="profession_p2">DEVELOPER</span>
+            </h2>
 
             <p class="front_page_description">
                 / Using HTML, CSS, JavaScript, React Native and Node.js I help to build websites, small and medium web
@@ -52,15 +55,21 @@
             <button class="front_page_btn accent_btn">
                 See my recent works —
             </button>
+            <div class="font_page_my_info">
+                <img src="./img/My-photo.jpeg" class="front_page_my_photo" alt="My-photo">
+                <div class="front_page_about_me">
+                    <p class="front_page_my_description mobile_element">
+                        About me in 10 sec
+                    </p>
+                    <p class="front_page_my_description tablet_element">
+                        About me <br>in 10 sec
+                    </p>
+                    <button class="front_page_play_btn" id="my_video_btn">
+                        PLAY
+                    </button>
+                </div>
+            </div>
 
-            <img src="./img/My_photo.jpg" class="front_page_my_photo" alt="My-photo">
-
-            <p class="front_page_my_description">
-                About me in 10 sec
-            </p>
-            <button class="front_page_play_btn" id="my_video_btn">
-                PLAY
-            </button>
             <img src="./img/laptop.svg" alt="" class="front_page_laptop">
             <div class="experience_container">
                 <h3 class="experience_title">
@@ -243,11 +252,11 @@
                         —</button>
                 </div>
             </div>
-        </section> 
+        </section>
         <section class="callback_form" id="contacts">
             <div class="container">
                 <form action="" class="callback_form_container">
-                    <h3 class="callback_form_title" >/Are you minding [a project?]</h3>
+                    <h3 class="callback_form_title">/Are you minding [a project?]</h3>
                     <p class="callback_form_descr">Leave a request to discuss the task and technical requirements
                     </p>
                     <input type="text" class="callback_form_input" placeholder="Name" id="callback-form-input-name">

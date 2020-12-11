@@ -75,6 +75,12 @@ body {
 }
 
 /* COMMON */
+.tablet_element {
+  display: none;
+}
+.desktop_element {
+  display: none;
+}
 .container {
   min-width: 320px;
   width: 100%;
@@ -261,7 +267,7 @@ body {
 
 /* Front page */
 .navigation {
-  width: 320px;
+  min-width: 320px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -300,7 +306,7 @@ body {
   color: var(--c-light);
 }
 .front_page {
-  width: 320px;
+  min-width: 320px;
   background: var(--c-dark);
   padding: 30px 10px 55px 10px;
   box-sizing: border-box;
@@ -340,9 +346,18 @@ body {
 .front_page_btn {
   padding-bottom: 40px;
 }
+.font_page_my_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.front_page_about_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .front_page_my_photo {
-  width: 100px;
-  height: 120px;
+  width: 170px;
   padding-top: 20px;
   padding-bottom: 20px;
   object-fit: contain;
@@ -353,8 +368,6 @@ body {
   font-weight: bold;
   font-size: 15px;
   line-height: 140%;
-  /* identical to box height, or 21px */
-
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -631,7 +644,7 @@ body {
   text-align: center;
 }
 .callback_form_input_err {
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   border: 1px solid red;
 }
 .callback_form_submit {
@@ -943,4 +956,129 @@ _________________________________
   font-size: 18px;
   line-height: 120%;
   color: var(--c-grey);
+}
+@media only screen and (min-width: 640px) {
+  .container {
+    padding-bottom: 70px;
+    min-width: 640px;
+  }
+  .mobile_element {
+    display: none;
+  }
+  .tablet_element {
+    display: block;
+  }
+  .desktop_element {
+    display: none;
+  }
+  .front_page_my_name {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 0;
+  }
+  .front_page_profession {
+    margin-top: 20px;
+    font-size: 55px;
+    line-height: 66px;
+  }
+  .profession_p1 {
+    margin-right: 40px;
+  }
+  .profession_p2 {
+    margin-left: 40px;
+  }
+  .front_page_my_description {
+    font-size: 17px;
+    line-height: 150%;
+    width: 385px;
+    margin: 0;
+  }
+  .front_page_about_me {
+    align-items: flex-start;
+  }
+  .font_page_my_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+  }
+  .front_page_my_photo {
+    width: 200px;
+    padding-right: 35px;
+  }
+  .front_page_my_description {
+    text-align: left;
+  }
+  .front_page_play_btn {
+    margin-bottom: 0;
+  }
+  .front_page_laptop {
+    width: 400px;
+    padding-bottom: 90px;
+  }
+  .about .container {
+    position: relative;
+  }
+
+  .about-img-text {
+    position: absolute;
+    right: 22px;
+    top: 228px;
+    font-size: 200px;
+    line-height: 240px;
+  }
+
+  .about-img {
+    width: 361px;
+    height: 390px;
+    left: -105px;
+    top: 70px;
+  }
+
+  .about-img-container {
+    margin-bottom: 0;
+  }
+
+  .about-title {
+    font-size: 50px;
+    line-height: 60px;
+    width: 600px;
+  }
+
+  .about-descr {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 60px;
+  }
+  .about-text {
+    width: 322px;
+  }
+  .about-text:last-child {
+    margin-bottom: 84px;
+  }
+
+  .team-projects-title,
+  .personal-projects-title {
+    text-align: left;
+    width: 400px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .team-project-item,
+  .personal-project-item {
+    margin: 0 25px 40px 25px;
+  }
+
+  .callback-form .container,
+  .personal-projects .container,
+  .team-projects .container {
+    align-items: normal;
+  }
+
+  .team-projects-title-bgd {
+    font-size: 200px;
+    line-height: 240px;
+    top: 19px;
+  }
 }
