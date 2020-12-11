@@ -631,6 +631,7 @@ body {
   text-align: center;
 }
 .callback_form_input_err {
+  transition: .2s ease-in-out;
   border: 1px solid red;
 }
 .callback_form_submit {
