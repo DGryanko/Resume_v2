@@ -22,24 +22,24 @@ callbackForm.addEventListener('submit', function(event){
     let hasError = false;
 
     if (!userName.value.trim()) {
-        userName.classList.add('callback_form_input_error');
+        userName.classList.add('callback_form_input_err');
         hasError = true;
     } else {
-        userName.classList.remove('callback_form_input_error');
+        userName.classList.remove('callback_form_input_err');
     }
 
     if (!userEmail.value.trim() || !isEmailValid(userEmail.value)) {
-        userEmail.classList.add('callback_form_input_error');
+        userEmail.classList.add('callback_form_input_err');
         hasError = true;
     } else {
-        userEmail.classList.remove('callback_form_input_error');
+        userEmail.classList.remove('callback_form_input_err');
     }
 
     if (!userPhone.value.trim() || !isPhoneValid(userPhone.value)) {
-        userPhone.classList.add('callback_form_input_error');
+        userPhone.classList.add('callback_form_input_err');
         hasError = true;
     } else {
-        userPhone.classList.remove('callback_form_input_error');
+        userPhone.classList.remove('callback_form_input_err');
     }
 
     if (hasError) {
