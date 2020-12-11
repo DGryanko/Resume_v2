@@ -647,7 +647,8 @@ body {
 }
 
 .calculator .container {
-  margin: 0 10px;
+  box-sizing: border-box;
+  margin: 0px;
   padding-bottom: 73px;
   display: flex;
   flex-direction: column;
@@ -722,6 +723,16 @@ body {
   font-size: 17px;
   line-height: 150%;
   color: var(--txt-c-dark);
+}
+.calculator_accent_btn {
+  background: var(--c-accent);
+  width: 100%;
+  height: 60px;
+  color: var(--c-light);
+  padding: 20px 35px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 _________________________________ .calculator_form_website_type {
   cursor: pointer;
