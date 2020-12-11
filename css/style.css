@@ -630,6 +630,9 @@ body {
   border-bottom: 1px solid var(--c-grey-blue);
   text-align: center;
 }
+.callback_form_input_err {
+  border: 1px solid red;
+}
 .callback_form_submit {
   font-weight: bold;
   font-size: 15px;
