@@ -278,6 +278,9 @@ body {
   font-display: row;
   align-items: center;
 }
+.desktop_menu_nav {
+
+}
 .hire_me {
   font-style: normal;
   font-weight: 800;
@@ -1161,5 +1164,16 @@ _________________________________
   .footer .container {
     align-items: flex-start;
     padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .mobile_element {
+    display: none;
+  }
+  .tablet_element {
+    display: none;
+  }
+  .desktop_element {
+    display: block;
   }
 }
