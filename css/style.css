@@ -639,7 +639,7 @@ body {
   padding: 10px 10px 15px 10px;
   margin-bottom: 30px;
   background: transparent;
-  text-decoration-color: var(--txt-c-grey-blue);
+  color: var(--txt-c-grey-light);
   border: none;
   border-bottom: 1px solid var(--c-grey-blue);
   text-align: center;
