@@ -279,7 +279,6 @@ body {
   align-items: center;
 }
 .desktop_menu_nav {
-
 }
 .hire_me {
   font-style: normal;
@@ -708,7 +707,11 @@ body {
   width: 270px;
   margin-bottom: 20px;
 }
-
+.calculator_text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .calculator-text {
   font-size: 17px;
   line-height: 150%;
@@ -1108,7 +1111,7 @@ _________________________________
   .callback-form-submit {
     margin-top: 10px;
   }
-  ________ .calculator .container {
+  .calculator .container {
     align-items: normal;
     position: relative;
     padding: 20px 10px 90px 10px;
@@ -1130,15 +1133,16 @@ _________________________________
     font-size: 36px;
     line-height: 150%;
   }
-
   .calculator-icon {
-    position: absolute;
-    right: 10px;
-    top: 405px;
+    margin-left: -100px;
+    margin-bottom: -45px;
     width: 344px;
-    z-index: 1;
   }
-
+  .calculator_text_container {
+    flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
   .calculator-text {
     text-align: left;
     width: 330px;
@@ -1146,6 +1150,7 @@ _________________________________
   }
 
   .calculator_form {
+    width: auto;
     z-index: 2;
     padding: 60px 80px 70px 80px;
   }
