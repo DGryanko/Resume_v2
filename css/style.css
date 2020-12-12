@@ -275,10 +275,8 @@ body {
 }
 .navigation_bar {
   display: flex;
-  font-display: row;
+  flex-direction: row;
   align-items: center;
-}
-.desktop_menu_nav {
 }
 .hire_me {
   font-style: normal;
@@ -1180,5 +1178,20 @@ _________________________________
   }
   .desktop_element {
     display: block;
+  }
+  .desktop_menu_nav {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .desktop_menu_item {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--txt-c-grey);
   }
 }
