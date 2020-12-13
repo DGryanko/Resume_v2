@@ -1480,6 +1480,10 @@ _________________________________
     padding: 40px 50px;
   }
   .calculator-title {
+    width: 750px;
+    font-size: 70px;
+    line-height: 84px;
     margin-top: 0;
   }
+
 }
