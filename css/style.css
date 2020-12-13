@@ -135,6 +135,7 @@ body {
   background: var(--modal-bgd-dark);
 }
 .modal_active {
+  z-index: 10;
   opacity: 1;
   pointer-events: all;
 }
@@ -401,6 +402,7 @@ body {
   padding: 10px 40px;
   font-weight: bold;
   font-size: 9px;
+  z-index: 2;
 }
 .front_page_laptop {
   width: 250px;
