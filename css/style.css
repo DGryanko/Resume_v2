@@ -92,6 +92,13 @@ body {
   padding: 30px 10px 55px 10px;
 }
 
+.container_nav {
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 30px 10px 55px 10px;
+}
 .container-left {
   align-items: flex-start;
 }
@@ -265,7 +272,7 @@ body {
   margin-top: 0;
 }
 
-/* Front page */
+/* Navigation */
 .navigation {
   min-width: 320px;
   display: flex;
@@ -305,11 +312,21 @@ body {
 .mobile_menu i {
   color: var(--c-light);
 }
+
+/* Front page */
 .front_page {
-  min-width: 320px;
+  width: 100%;
   background: var(--c-dark);
-  padding: 30px 10px 55px 10px;
-  box-sizing: border-box;
+}
+.front_page_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.front_page_main,
+.front_page_my_info,
+.front_page_about_me {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,7 +349,7 @@ body {
   text-transform: uppercase;
   color: var(--txt-c-light);
   text-align: center;
-  padding: 20px;
+  width: 442px;
 }
 .front_page_description {
   font-style: normal;
@@ -349,15 +366,17 @@ body {
   width: 230px;
   text-align: center;
 }
-.font_page_my_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.front_page_my_info {
+  min-width: 320px;
+  background: var(--c-dark);
+  padding: 30px 10px 55px 10px;
+  box-sizing: border-box;
 }
 .front_page_about_me {
   width: 100px;
 }
 .front_page_my_photo {
+  display: block;
   width: 170px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -403,7 +422,7 @@ body {
   margin: 0;
   padding-bottom: 30px;
 }
-.expeiriece_skill {
+.experience_skill  {
   display: flex;
   align-items: center;
   padding-bottom: 20px;
@@ -422,7 +441,7 @@ body {
   font-size: 8px;
   padding-right: 5px;
 }
-.expirience_txt {
+.experience_txt {
   color: var(--txt-c-light);
   margin: 0;
   font-style: normal;
@@ -971,6 +990,12 @@ _________________________________
   line-height: 120%;
   color: var(--c-grey);
 }
+.front_page_my_description_tablet {
+  display: none;
+}
+.desktop_menu_nav {
+  display: none;
+}
 @media only screen and (min-width: 640px) {
   .container {
     padding-bottom: 70px;
@@ -980,10 +1005,13 @@ _________________________________
     display: none;
   }
   .tablet_element {
-    display: block;
+    display: flex;
   }
   .desktop_element {
     display: none;
+  }
+  .front_page_my_description_tablet {
+    display: block;
   }
   .front_page_my_name {
     font-size: 36px;
@@ -994,12 +1022,13 @@ _________________________________
     margin-top: 20px;
     font-size: 55px;
     line-height: 66px;
+    width: 462px;
   }
   .profession_p1 {
-    margin-right: 40px;
+    margin-right: 60px;
   }
   .profession_p2 {
-    margin-left: 40px;
+    margin-left: 60px;
   }
   .front_page_my_description {
     font-size: 17px;
@@ -1018,7 +1047,6 @@ _________________________________
   }
   .front_page_my_photo {
     width: 200px;
-    padding-right: 35px;
   }
   .front_page_play_btn {
     margin-bottom: 0;
@@ -1196,5 +1224,110 @@ _________________________________
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--txt-c-grey);
+    transition: all 0.3s ease-in-out;
+  }
+  .desktop_menu_item:hover {
+    color: var(--txt-c-accent);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: var(--desktop-lg);
+  }
+  .tablet_element {
+    display: none;
+  }
+
+  .desktop_element {
+    display: block;
+  }
+
+  .front_page_my_info {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .front_page_profession {
+    font-size: 70px;
+    line-height: 84px;
+    width: 572px;
+    margin-left: -60px;
+    margin-bottom: 35px;
+    z-index: 2;
+  }
+
+  .experience_wrapper {
+    order: 1;
+  }
+
+  .front_page_main {
+    align-items: flex-start;
+    order: 2;
+    z-index: 2;
+    position: relative;
+  }
+  .front_page_my_photo {
+    position: absolute;
+    width: 256px;
+    z-index: 1;
+    right: 24%;
+    bottom: 228px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  .container:hover .front_page_my_photo {
+    opacity: 1;
+  }
+
+  .front_page_description {
+    text-align: left;
+    margin-bottom: 65px;
+    z-index: 2;
+  }
+
+  .front_page_gallery_btn {
+    width: 387px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 90px;
+  }
+  .profession_part_2 {
+    margin-left: 60px;
+  }
+
+  .front_page_wrapper {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 115px;
+  }
+
+  .front_page_laptop {
+    position: absolute;
+    bottom: -64px;
+    right: 0;
+    z-index: 1;
+  }
+  .front_page_my_info {
+    order: 3;
+  }
+
+  .front_page_my_description {
+    text-align: right;
+  }
+
+  .front_page_my_name {
+    margin-top: 0;
+    z-index: 2;
+  }
+  .expeiriece_title {
+    text-align: left;
+  }
+
+  .experience_skill {
+    margin-left: 0;
   }
 }
