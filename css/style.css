@@ -368,7 +368,6 @@ body {
   text-align: center;
 }
 .front_page_my_info {
-  min-width: 320px;
   background: var(--c-dark);
   padding: 30px 10px 55px 10px;
   box-sizing: border-box;
@@ -1245,7 +1244,6 @@ _________________________________
   }
 
   .front_page_my_info {
-    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
