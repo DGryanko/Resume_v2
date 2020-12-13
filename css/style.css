@@ -1122,9 +1122,6 @@ _________________________________
   .team-projects .container {
     align-items: normal;
   }
-  .callback_form_submit {
-    width: 200px;
-  }
 
   .team-projects-title-bgd {
     font-size: 200px;
@@ -1241,12 +1238,13 @@ _________________________________
     color: var(--txt-c-accent);
   }
   .callback_form_input {
-    width: 261px;
-    margin: 40px;
+    width: 200px;
     text-align: left;
   }
   .callback_form_input_container {
+    width: 90%;
     flex-direction: row;
+    justify-content: space-between;
   }
   .callback_form_container {
     padding-bottom: 105px;
@@ -1302,6 +1300,9 @@ _________________________________
     opacity: 1;
   }
 
+  .callback_form_input {
+    width: 261px;
+  }
   .front_page_description {
     text-align: left;
     margin-bottom: 65px;
