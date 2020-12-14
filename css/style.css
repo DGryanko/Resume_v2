@@ -682,7 +682,7 @@ body {
 }
 /* CALLBACK FORM */
 .callback_form_container {
-  width: 100%;
+  width: 96%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1499,7 +1499,7 @@ _________________________________
     justify-content: space-between;
   }
   .calculator_form {
-    width: 386px;
+    width: 286px;
     padding: 40px 50px;
   }
 }
