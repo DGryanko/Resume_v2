@@ -518,7 +518,53 @@ body {
   left: -35px;
   top: 55px;
 }
-
+/* MOUSE */
+.cont_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 89%;
+}
+.recent_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 340px;
+}
+.mouse {
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  bottom: 40px;
+  display: block;
+  height: 46px;
+  left: 50%;
+  margin: 0 auto 0 -26px;
+  width: 26px;
+}
+.mouse span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  display: block;
+  height: 4px;
+  margin: 6px auto;
+  width: 4px;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
 /* PERSONAL PROJECT */
 .about-projects {
   display: none;
@@ -1269,7 +1315,7 @@ _________________________________
   }
 
   .desktop_element {
-    display: flex;;
+    display: flex;
   }
 
   .front_page_my_info {
@@ -1421,7 +1467,6 @@ _________________________________
     justify-content: space-between;
   }
 
-
   .about-projects-count {
     font-weight: bold;
     font-size: 65px;
@@ -1429,8 +1474,6 @@ _________________________________
     color: var(--txt-c-light);
     margin: 0;
   }
-
-
 
   .about-img-text {
     font-size: 250px;
