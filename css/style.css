@@ -682,7 +682,7 @@ body {
 }
 /* CALLBACK FORM */
 .callback_form_container {
-  width: 96%;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1298,7 +1298,7 @@ _________________________________
     text-align: left;
   }
   .callback_form_input_container {
-    width: 90%;
+    width: inherit;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -1316,6 +1316,10 @@ _________________________________
 
   .desktop_element {
     display: flex;
+  }
+
+  .callback_form_input {
+    margin: 30px;
   }
 
   .front_page_my_info {
