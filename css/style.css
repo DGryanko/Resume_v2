@@ -520,7 +520,9 @@ body {
 }
 
 /* PERSONAL PROJECT */
-
+.about-projects {
+  display: none;
+}
 .personal-projects {
   background: var(--c-dark);
 }
@@ -1267,7 +1269,7 @@ _________________________________
   }
 
   .desktop_element {
-    display: block;
+    display: flex;;
   }
 
   .front_page_my_info {
@@ -1419,21 +1421,6 @@ _________________________________
     justify-content: space-between;
   }
 
-  .about-projects-bar {
-    background: var(--c-accent);
-    width: 159px;
-    height: 465px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 10px 5px;
-    margin-bottom: 35px;
-    margin-top: 15px;
-  }
-
-  .about-projects {
-    z-index: 2;
-  }
 
   .about-projects-count {
     font-weight: bold;
@@ -1443,14 +1430,7 @@ _________________________________
     margin: 0;
   }
 
-  .about-projects-text {
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 135%;
-    color: var(--txt-c-dark);
-    text-transform: uppercase;
-    width: 125px;
-  }
+
 
   .about-img-text {
     font-size: 250px;
@@ -1480,11 +1460,35 @@ _________________________________
     padding: 40px 50px;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1172px) {
   .calculator-title {
     width: 750px;
     font-size: 70px;
     line-height: 84px;
     margin-top: 0;
+  }
+  .about-projects-bar {
+    background: var(--c-accent);
+    width: 159px;
+    height: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px 5px;
+    margin-bottom: 35px;
+    margin-top: 15px;
+  }
+  .about-projects-text {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 135%;
+    color: var(--txt-c-dark);
+    text-transform: uppercase;
+    width: 125px;
+  }
+
+  .about-projects {
+    display: block;
+    z-index: 2;
   }
 }
