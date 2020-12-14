@@ -1479,11 +1479,12 @@ _________________________________
     width: 386px;
     padding: 40px 50px;
   }
+}
+@media only screen and (min-width: 1170px) {
   .calculator-title {
     width: 750px;
     font-size: 70px;
     line-height: 84px;
     margin-top: 0;
   }
-
 }
