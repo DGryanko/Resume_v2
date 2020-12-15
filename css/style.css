@@ -75,6 +75,13 @@ body {
 }
 
 /* COMMON */
+.fixed_top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 .tablet_element {
   display: none;
 }
@@ -94,10 +101,9 @@ body {
 
 .container_nav {
   min-width: 320px;
-  width: 100%;
   box-sizing: border-box;
   margin: auto;
-  padding: 30px 10px 55px 10px;
+  padding: 20px 10px 10px 10px;
 }
 .container-left {
   align-items: flex-start;
@@ -175,6 +181,7 @@ body {
   flex-direction: column;
 }
 .mobile_menu_item {
+  position: relative;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
@@ -182,8 +189,16 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--txt-c-grey);
-  padding-bottom: 35px;
+  margin-bottom: 35px;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
+.mobile_menu_item:hover {
+  color: var(--txt-c-accent);
+  border-bottom: 1px solid var(--c-accent);
+  transform: scale(2);
+}
+
 .mobile_menu_my_tel {
   text-decoration: none;
   font-weight: bold;
@@ -192,6 +207,23 @@ body {
   text-align: center;
   color: var(--txt-c-dark);
   padding-bottom: 15px;
+  content: "\260E  ";
+  transition: all 0.3s ease-in-out;
+}
+.mobile_menu_my_tel::before {
+  content: "\260E  ";
+  opacity: 0;
+  color: var(--txt-c-accent);
+}
+.mobile_menu_my_tel:hover::before {
+  content: "\260E  ";
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.mobile_menu_my_tel:hover {
+  color: var(--txt-c-accent);
+  transform: scale(1.5);
+  transition: all 0.3s ease-in-out;
 }
 .mobile_menu_my_mail {
   font-size: 17px;
@@ -200,6 +232,21 @@ body {
   color: var(--txt-c-dark);
   padding-bottom: 5px;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.mobile_menu_my_mail::before {
+  content: "\2709  ";
+  opacity: 0;
+  color: var(--txt-c-accent);
+}
+.mobile_menu_my_mail:hover::before {
+  content: "\2709  ";
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.mobile_menu_my_mail:hover {
+  color: var(--txt-c-accent);
+  transform: scale(1.5);
 }
 .modal_close_btn {
   font-style: 18px;
@@ -214,6 +261,10 @@ body {
   background: var(--c-accent);
   color: var(--c-light);
   padding: 10px 14px;
+  transition: all 0.3s ease-in-out;
+}
+.mobile_menu_close_btn:hover {
+  transform: scale(2);
 }
 
 /* My video modal */
@@ -225,13 +276,17 @@ body {
   height: 80%;
 }
 .my_video_content {
-  width: 100%;
+  width: 80%;
 }
 .my_video_close_btn {
   background: var(--c-light);
   color: var(--c-dark);
   padding: 10px 14px;
   border-radius: 5%;
+  transition: all 0.3s ease-in-out;
+}
+.my_video_close_btn {
+  transform: scale(2);
 }
 /* Request received */
 .modal_request_received {
@@ -1062,7 +1117,6 @@ _________________________________
 }
 @media only screen and (min-width: 640px) {
   .container {
-    padding-bottom: 70px;
     min-width: 640px;
   }
   .mobile_element {
@@ -1509,6 +1563,17 @@ _________________________________
   .calculator_form {
     width: 286px;
     padding: 40px 50px;
+  }
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer_content {
+    width: calc(50% + 100px);
+  }
+  .project-modal-container {
+    padding: 95px 95px;
   }
 }
 @media only screen and (min-width: 1172px) {
