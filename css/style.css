@@ -392,6 +392,7 @@ body {
 /* Front page */
 .front_page {
   width: 100%;
+  padding-top: 10px;
   background: var(--c-dark);
 }
 .front_page_wrapper {
