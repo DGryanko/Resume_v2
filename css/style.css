@@ -130,6 +130,12 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.accent_btn:hover {
+  outline: 1px solid var(--c-accent);
+  background: transparent;
+  color: var(--txt-c-accent);
 }
 /* MODALS */
 .modal {
@@ -145,7 +151,7 @@ body {
   background: var(--modal-bgd-dark);
 }
 .modal_active {
-  z-index: 10;
+  z-index: 1100;
   opacity: 1;
   pointer-events: all;
 }
@@ -175,6 +181,7 @@ body {
 .mobile_menu_nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .mobile_menu_contacts {
   display: flex;
@@ -355,9 +362,18 @@ body {
   color: var(--txt-c-accent);
   text-decoration: none;
   margin: 0 20px 0 0;
+  transition: all 0.2s ease-in-out;
+}
+.hire_me:hover {
+  transform: scale(1.4);
+  background: var(--c-light);
 }
 .logo_link {
   text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+.logo_link:hover {
+  transform: scale(1.4);
 }
 .mobile_menu {
   width: 30px;
@@ -465,6 +481,11 @@ body {
   font-weight: bold;
   font-size: 9px;
   z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+.front_page_play_btn:hover {
+  background: var(--c-accent);
+  color: var(--txt-c-light);
 }
 .front_page_laptop {
   width: 250px;
@@ -1345,10 +1366,11 @@ _________________________________
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--txt-c-grey);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .desktop_menu_item:hover {
     color: var(--txt-c-accent);
+    transform: scale(1.2);
   }
   .callback_form_input {
     width: 200px;
@@ -1402,7 +1424,7 @@ _________________________________
   .front_page_main {
     align-items: flex-start;
     order: 2;
-    z-index: 2;
+    z-index: 4;
     position: relative;
   }
   .front_page_my_photo {
@@ -1453,6 +1475,7 @@ _________________________________
   }
   .front_page_my_info {
     order: 3;
+    z-index: 2;
   }
 
   .front_page_my_description {
@@ -1593,6 +1616,7 @@ _________________________________
     padding: 10px 5px;
     margin-bottom: 35px;
     margin-top: 15px;
+    transition: all .3s ease-in-out;
   }
   .about-projects-text {
     font-weight: bold;

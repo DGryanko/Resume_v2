@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/choices.min.css">
     <link rel="stylesheet" href="./css/modals.css">
+    <link rel="stylesheet" href="./css/aos.css">
 
     <link rel="icon" href="./img/favicon.png" type="image/x-icon">
 </head>
@@ -26,7 +27,7 @@
     <!-- Front page -->
     <header>
         <section class="front_page">
-            <nav class="container container_nav navigation fixed_top">
+            <nav class="container container_nav navigation fixed_top" data-aos="fade-down">
                 <a href="" class="logo_link">
                     <img src="./img/goit-logo.svg" alt="go-it logo">
                 </a>
@@ -67,7 +68,7 @@
                         </p>
 
                         <div class="cont_wrapper">
-                            <div class="recent_btn">
+                            <div class="recent_btn"data-aos="fade-up">
                                 <a href="#recent" class="front_page_btn accent_btn">
                                     See my recent works —
                                 </a>
@@ -84,7 +85,7 @@
                     </div>
                     <div class="front_page_my_info">
                         <img src="./img/My_photo.jpg" class="front_page_my_photo" alt="My-photo" />
-                        <div class="front_page_about_me">
+                        <div class="front_page_about_me"  data-aos="fade-left">
                             <p class="front_page_my_description mobile_element">
                                 About me in 10 sec
                             </p>
@@ -97,7 +98,7 @@
                         </div>
                     </div>
                     <img src="./img/laptop.svg" alt="" class="front_page_laptop" />
-                    <div class="experience_wrapper">
+                    <div class="experience_wrapper" data-aos="fade-right">
                         <div class="experience_container">
                             <h3 class="experience_title">
                                 My Coding Skills
@@ -163,9 +164,9 @@
                     </div>
 
                     <div class="about-img-container">
-                        <p class="about-img-text">
+                        <p class="about-img-text" data-aos="flip-left">
                             WEB
-                            <img src="img/web-apps-laptop.png" alt="web apps laptop" class="about-img" />
+                            <img src="img/web-apps-laptop.png" alt="web apps laptop" class="about-img" data-aos="flip-left" />
                         </p>
                     </div>
                     <p class="about-text mobile-element desktop-element">
@@ -187,7 +188,8 @@
                 </div>
 
                 <div class="about-projects desktop-element">
-                    <div class="about-projects-bar">
+                    <div class="about-projects-bar" data-aos="fade-up"
+                    data-aos-duration="3000">
                         <p class="about-projects-count">10+</p>
                     </div>
                     <p class="about-projects-text">completed projects</p>
@@ -655,6 +657,8 @@
     <script src="./js/project-modals.js"></script>
     <script src="./js/modals.js"></script>
     <script src="./js/callback_form.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/animation-on-scroll.js"></script>
 </body>
 
 </html>
