@@ -1389,7 +1389,7 @@ _________________________________
   .container {
     max-width: var(--desktop-lg);
   }
-  .tablet_element {
+  .tablet-element {
     display: none;
   }
 
@@ -1600,6 +1600,9 @@ _________________________________
   }
 }
 @media only screen and (min-width: 1172px) {
+  .tablet-element {
+    display: none;
+  }
   .calculator-title {
     width: 750px;
     font-size: 70px;
