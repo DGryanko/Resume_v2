@@ -110,7 +110,7 @@ body {
   align-items: center;
 }
 .swiper-container {
-  width: 300px;
+  width: 260px;
   height: auto;
   margin-bottom: 30px;
 }
@@ -168,6 +168,9 @@ body {
 
 .body_scroll_disable {
   overflow: hidden;
+}
+.project-modal-scrollable {
+  max-width: 300px;
 }
 /* MODAL MENU */
 
@@ -1356,6 +1359,9 @@ _________________________________
     align-items: flex-start;
     padding-bottom: 0;
   }
+  .project-modal-scrollable {
+    max-width: 640px;
+  }
 }
 @media only screen and (min-width: 900px) {
   .mobile_element {
@@ -1398,6 +1404,9 @@ _________________________________
   }
   .callback_form_container {
     padding-bottom: 105px;
+  }
+  .project-modal-scrollable {
+    max-width: 1000px;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -1612,6 +1621,7 @@ _________________________________
   }
   .project-modal-container {
     padding: 95px 95px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1172px) {
