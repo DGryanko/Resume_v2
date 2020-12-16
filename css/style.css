@@ -81,6 +81,9 @@ body {
 .desktop_element {
   display: none;
 }
+.desktop-element {
+  display: none;
+}
 .container {
   min-width: 320px;
   width: 100%;
@@ -1151,6 +1154,9 @@ _________________________________
   }
   .tablet_element {
     display: flex;
+  }
+  .desktop-element {
+    display: none;
   }
   .desktop_element {
     display: none;
